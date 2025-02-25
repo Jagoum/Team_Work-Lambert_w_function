@@ -6,14 +6,21 @@ edition = "2021"
 [dependencies]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 anyhow = "1.0.96"
+=======
+>>>>>>> dbe5be7912d235abf426d691a6799733ca4100fe
 env_logger = "0.11.6"
 log = "0.4.26"
 structopt = "0.3.26"
 thiserror = "2.0.11"
+<<<<<<< HEAD
 =======
 structopt = "0.3"
 thiserror = "1.0"
+=======
+
+>>>>>>> dbe5be7912d235abf426d691a6799733ca4100fe
 
 [[bin]]
 name = "Team_Work_Lambert_w_function"
