@@ -1,28 +1,16 @@
- use thiserror::Error;
- use std::f64::consts::E;
+use anyhow::Result;
 
-#[derive(Debug, Error)]
-pub enum Error {
-    #[error("value should be more than -1/e")]
-    Invalidinput,
-}
-
-
-pub fn lambert_function(x: f64) -> Result<f64, Error> {
-
-    let div = -1.0 / E;
-
-  
-    
-    if x < div {
-        return Err(Error::Invalidinput);
+pub fn lambert_w(x: f64) -> Result<f64> {
+    // x must be > -1/e
+    if x < -1.0 / std::f64::consts::E {
+        return Err(anyhow::anyhow!("Input out of domain: x must be >= -1/e"));
     }
  
 
     let w = x;
     println!("{}", x);
 
-    let iter = 100;
+    let iter = 50;
     let tolerance = 1e-10;
     let mut wl = 0.0;
     for _ in 0..iter {

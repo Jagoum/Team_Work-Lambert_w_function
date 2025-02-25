@@ -10,6 +10,7 @@ log = "0.4.26"
 structopt = "0.3.26"
 thiserror = "2.0.11"
 
+
 [[bin]]
 name = "Team_Work_Lambert_w_function"
 path = "src/main.rs"
