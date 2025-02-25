@@ -11,7 +11,7 @@ pub enum Error {
 }
 
 
-pub fn take_value(x: f64) -> Result<f64, Error> {
+pub fn lambert_function(x: f64) -> Result<f64, Error> {
     let div = -1.0 / E;
 
     if x < div {
