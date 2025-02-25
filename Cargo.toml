@@ -4,6 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+env_logger = "0.11.6"
+log = "0.4.26"
+structopt = "0.3.26"
+thiserror = "2.0.11"
 
 [lib]
 name = "Team_Work_Lambert_w_function"
