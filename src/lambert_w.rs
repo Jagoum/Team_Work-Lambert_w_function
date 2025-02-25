@@ -1,3 +1,5 @@
+use std::f64::consts::E;
+
 use anyhow::Result;
 
 pub fn lambert_w(x: f64) -> Result<f64> {
