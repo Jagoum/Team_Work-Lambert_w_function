@@ -22,7 +22,7 @@ pub fn lambert_function(x: f64) -> Result<f64, Error> {
     let w = x;
     println!("{}", x);
 
-    let iter = 50;
+    let iter = 100;
     let tolerance = 1e-10;
     let mut wl = 0.0;
     for _ in 0..iter {
