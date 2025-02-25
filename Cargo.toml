@@ -1,6 +1,15 @@
 [package]
-name = "Team_Work-Lambert_w_function"
+name = "Team_Work_Lambert_w_function"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+structopt = "0.3"
+
+[[bin]]
+name = "Team_Work_Lambert_w_function"
+path = "src/main.rs"
+
+[lib]
+name = "Team_Work_Lambert_w_function"
+path = "src/lib.rs"
