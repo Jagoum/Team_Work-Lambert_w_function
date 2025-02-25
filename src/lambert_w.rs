@@ -8,11 +8,8 @@ pub enum Error {
 }
 
 
-<<<<<<< HEAD:src/lambert_w.rs
 pub fn lambert_function(x: f64) -> Result<f64, Error> {
-=======
-pub fn lambert_w(x: f64) -> Result<f64, Error> {
->>>>>>> write:lambert_w.rs
+
     let div = -1.0 / E;
 
   
