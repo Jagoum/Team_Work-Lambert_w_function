@@ -5,22 +5,18 @@
 pub enum Error {
     #[error("value should be more than -1/e")]
     Invalidinput,
-
-    #[error("value should be less than 0")]
-    ZeroValue,
 }
 
 
-pub fn take_value(x: f64) -> Result<f64, Error> {
+pub fn lambert_w(x: f64) -> Result<f64, Error> {
     let div = -1.0 / E;
 
+  
+    
     if x < div {
         return Err(Error::Invalidinput);
     }
-
-    if x > 0.0 {
-        return Err(Error::ZeroValue);
-    }
+ 
 
     let w = x;
     println!("{}", x);
