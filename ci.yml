@@ -36,6 +36,6 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ghcr.io/onelrian/lambert_w_function:sha-${{ github.sha }}
-            ghcr.io/onelrian/lambert_w_function:branch-${{ github.ref_name }}
-            ghcr.io/onelrian/lambert_w_function:latest
+            ghcr.io/Jagoum/Team_Work-Lambert_w_function:sha-${{ github.sha }}
+            ghcr.io/Jagoum/Team_Work-Lambert_w_function:branch-${{ github.ref_name }}
+            ghcr.io/Jagoum/Team_Work-Lambert_w_function:latest
