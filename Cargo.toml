@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 structopt = "0.3"
+thiserror = "1.0"
 
 [[bin]]
 name = "Team_Work_Lambert_w_function"
