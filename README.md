@@ -22,6 +22,12 @@ OR
 
    For the Dockerfile first start by building the image by running 
 
+   And 
+
+     docker pull ghcr.io/jagoum/team_lambert_watest:latest    
+to pull the image 
+
+
     docker build -t <image_name> .
 
 and run it using 
