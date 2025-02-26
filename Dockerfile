@@ -13,7 +13,7 @@ FROM debian:bookworm-slim
 
 WORKDIR /app
 # Copy the binary from the builder stage.
-COPY --from=builder /app/target/release/lambert_w .
+COPY --from=builder /app/target/release/Team_Work_Lambert_w_function /usr/local/bin/Team_Work_Lambert_w_function
 
 # Set the startup command.
-CMD ["./lambert_w"]
+ENTRYPOINT ["/usr/local/bin/Team_Work_Lambert_w_function"]
