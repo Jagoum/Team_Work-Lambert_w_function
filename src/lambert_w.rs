@@ -17,31 +17,34 @@ pub fn lambert_function(x: f64) -> Result<f64, Error> {
     if x < div {
         return Err(Error::Invalidinput);
     }
+
+     let mut w_next = 0.0;
  
 
-     // Initial guess
-     let mut w = if x == 0.0 {
-        0.0
-    } else if x < 1.0 {
-        x * (1.0 - x.exp()) // Better initial guess for small positive numbers
-    } else {
-        x.ln() // Initial guess for x >= 1.0
-    };
+// Initial guess
+let mut w = if x == 0.0 {
+    0.0
+} else if x < 1.0 {
+    x * (1.0 - x.exp()) // Better initial guess for small positive numbers
+} else {
+    x.ln() // Initial guess for x >= 1.0
+};
 
-    let iter = 50;
-    let tolerance = 1e-10;
-    let mut wl = 0.0;
-    for _ in 0..iter {
-        let f = w * E.powf(w) - x;
+for _ in 0..500 {
+    let ew = w.exp();
+    let wew = w * ew;
+    let l = wew - x;
+    let l_prime = ew * (w + 1.0);
+    
+    // Pure Newton-Raphson update
+     w_next = w - l / l_prime; 
 
-        let f_prime = E.powf(w) * w + E.powf(w);
-
-        wl = w - f / f_prime;
-
-        if (wl - w).abs() < tolerance {
-            wl = w
-        }
-        // println!("Iteration {}: w = {}, f(w) = {}, f'(w) = {}", i, w, f, f_prime);
+    // convergence tolerance
+    if (w_next - w).abs() < 1e-7 { 
+        return Ok(w_next);
     }
-    Ok(wl)
+
+    w = w_next;
+    }
+    Ok(w_next)
 }
