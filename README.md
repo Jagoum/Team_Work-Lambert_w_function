@@ -1,4 +1,4 @@
-# Team Work-Lambert_w function
+# Team Work Lambert w function
 
    ## INTRODUCTION
  This Project was made by the new team 4rust4goats so as to implement  the lambert_w function in rust.
