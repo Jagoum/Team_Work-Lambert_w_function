@@ -17,7 +17,7 @@ fn main() {
 
 #[test]
 fn correct_output(){
-    assert_eq!(lambert_function(1.0).unwrap(),1.0)
+    assert_eq!(lambert_function(1.0).unwrap(),0.567143290409784)
 }
 
 #[test]
