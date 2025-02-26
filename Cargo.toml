@@ -5,13 +5,15 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.96"
+predicates = "3.0"
+assert_cmd = "2.0"
 env_logger = "0.11.6"
 log = "0.4.26"
 structopt = "0.3.26"
 thiserror = "2.0.11"
 
 [[bin]]
-name = "Team_Work_Lambert_w_function"
+name = "team_work_lambert_w_function"  # Use snake case
 path = "src/main.rs"
 
 [lib]
