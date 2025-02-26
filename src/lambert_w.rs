@@ -1,13 +1,10 @@
 use std::f64::consts::E;
 use thiserror::Error;
 
-
 #[derive(Debug, Error)]
 pub enum Error {
-
     #[error("value should be more than -1/e")]
-    Invalidinput,     
-
+    Invalidinput,
 }
 pub fn lambert_function(x: f64) -> Result<f64, Error> {
     let div = -1.0 / E;
@@ -51,7 +48,7 @@ pub fn lambert_function(x: f64) -> Result<f64, Error> {
 mod lambert {
     use super::*;
     use log::info;
-   
+
     fn init() {
         let _ = env_logger::builder().is_test(true).try_init();
     }
@@ -62,8 +59,7 @@ mod lambert {
 
         info!("lambert for values positive values");
         let result = lambert_function(1.0);
-        assert_eq!(result.unwrap(),0.567143290409784);
-     
+        assert_eq!(result.unwrap(), 0.567143290409784);
     }
 
     #[test]
@@ -86,6 +82,9 @@ mod lambert {
         init();
 
         info!("lambert for large values");
-        assert_eq!(lambert_function(10000000000000000000000000000.0).unwrap(), 60.371859509617295);
+        assert_eq!(
+            lambert_function(10000000000000000000000000000.0).unwrap(),
+            60.371859509617295
+        );
     }
 }

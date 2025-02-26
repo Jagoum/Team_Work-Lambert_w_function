@@ -1,5 +1,5 @@
 [package]
-name = "Team_Work_Lambert_w_function"
+name = "team_work_lambert_w_function"
 version = "0.1.0"
 edition = "2021"
 
@@ -17,5 +17,5 @@ name = "team_work_lambert_w_function"  # Use snake case
 path = "src/main.rs"
 
 [lib]
-name = "Team_Work_Lambert_w_function"
+name = "team_work_lambert_w_function"
 path = "src/lib.rs"
