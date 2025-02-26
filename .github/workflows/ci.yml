@@ -68,7 +68,7 @@ jobs:
           DSLIM_HTTP_PROBE: "false"
         with:
           target: ghcr.io/${{ secrets.TOKEN }}/team_work-lambert_w_function:latest  # Use the full repository path
-          tag: slim  # Only specify the tag name (e.g., "slim")
+          tag: slim 
 
       - name: Push slimmed Docker image
         run: |
