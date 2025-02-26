@@ -1,10 +1,11 @@
 use std::f64::consts::E;
 use thiserror::Error;
 
+#[derive(Debug, Error)]
 pub enum Error {
 
     #[error("value should be more than -1/e")]
-    Invalidinput,     c
+    Invalidinput,     
 
 }
 pub fn lambert_function(x: f64) -> Result<f64, Error> {
