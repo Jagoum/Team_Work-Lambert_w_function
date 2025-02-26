@@ -62,7 +62,7 @@ mod lambert {
 
         info!("lambert for values positive values");
         let result = lambert_function(1.0);
-        assert_eq!(result.unwrap(),0.56714329);
+        assert_eq!(result.unwrap(),0.567143290409784);
      
     }
 
@@ -74,11 +74,11 @@ mod lambert {
         assert_eq!(lambert_function(0.0).unwrap(), 0.0);
     }
     #[test]
-    fn lambert_w() {
+    fn lambert_function_neg_val() {
         init();
 
         info!("lambert a value less than -1/e");
-        assert_eq!(lambert_function(-0.2).unwrap(), -0.25917110181907377);
+        assert_eq!(lambert_function(-0.2).unwrap(), -0.2591711018190738);
     }
 
     #[test]
