@@ -13,7 +13,7 @@ structopt = "0.3.26"
 thiserror = "2.0.11"
 
 [[bin]]
-name = "Team_Work_Lambert_w_function"
+name = "team_work_lambert_w_function"  # Use snake case
 path = "src/main.rs"
 
 [lib]
