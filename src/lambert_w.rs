@@ -1,19 +1,18 @@
 use std::f64::consts::E;
 use thiserror::Error;
 
-#[derive(Debug, Error)]
 pub enum Error {
-    #[error("value should be more than -1/e")]
-    Invalidinput,
-}
 
+    #[error("value should be more than -1/e")]
+    Invalidinput,     c
+
+}
 pub fn lambert_function(x: f64) -> Result<f64, Error> {
     let div = -1.0 / E;
 
     if x < div {
         return Err(Error::Invalidinput);
     }
-
     let mut w_next = 0.0;
 
     // Initial guess

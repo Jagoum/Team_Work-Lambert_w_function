@@ -17,3 +17,4 @@ path = "src/main.rs"
 [lib]
 name = "Team_Work_Lambert_w_function"
 path = "src/lib.rs"
+
