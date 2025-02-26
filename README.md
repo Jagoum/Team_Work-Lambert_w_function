@@ -22,16 +22,25 @@ OR
 
    For the Dockerfile first start by building the image by running 
 
+   And 
+
+     docker pull ghcr.io/jagoum/team_lambert_watest:latest    
+to pull the image 
+
+
     docker build -t <image_name> .
 
 and run it using 
 
     docker run -it --rm --name<container_name> <image_name>
 
+
 ### CONTRIBUTION
 
- If you are interested in contributing you will have to 
+ If you are interested in contributing you will have to  
 
-       git pull https://github.com/Jagoum/Team_Work-Lambert_w_function.git
+      git pull https://github.com/Jagoum/Team_Work-Lambert_w_function.git
+
+
 
 and finaly make a pull request so as for your contibution to be admit and merge to the main branch.
