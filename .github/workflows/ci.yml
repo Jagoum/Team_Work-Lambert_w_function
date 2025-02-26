@@ -58,18 +58,18 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ghcr.io/${{ secrets.TOKEN }}/Team_Work-Lambert_w_function:sha-${{ github.sha }}
-            ghcr.io/${{ secrets.TOKEN }}/Team_Work-Lambert_w_function:branch-${{ github.ref_name }}
-            ghcr.io/${{ secrets.TOKEN }}/Team_Work-Lambert_w_function:latest
+            ghcr.io/${{ secrets.TOKEN }}/team_work-lambert_w_function:sha-${{ github.sha }}
+            ghcr.io/${{ secrets.TOKEN }}/team_work-lambert_w_function:branch-${{ github.ref_name }}
+            ghcr.io/${{ secrets.TOKEN }}/team_work-lambert_w_function:latest
 
       - name: Slim Docker image
         uses: kitabisa/docker-slim-action@v1
         env:
           DSLIM_HTTP_PROBE: "false"
         with:
-          target: ghcr.io/${{ secrets.TOKEN }}/Team_Work-Lambert_w_function:latest  # Use the TOKEN secret
-          tag: ghcr.io/${{ secrets.TOKEN }}/Team_Work-Lambert_w_function:slim  # Use the TOKEN secret
+          target: ghcr.io/${{ secrets.TOKEN }}/team_work-lambert_w_function:latest  # Use lowercase
+          tag: ghcr.io/${{ secrets.TOKEN }}/team_work-lambert_w_function:slim  # Use lowercase
 
       - name: Push slimmed Docker image
         run: |
-          docker push ghcr.io/${{ secrets.TOKEN }}/Team_Work-Lambert_w_function:slim
+          docker push ghcr.io/${{ secrets.TOKEN }}/team_work-lambert_w_function:slim
