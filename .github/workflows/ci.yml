@@ -67,8 +67,8 @@ jobs:
         env:
           DSLIM_HTTP_PROBE: "false"
         with:
-          target: ghcr.io/${{ secrets.TOKEN }}/team_work-lambert_w_function:latest  # Use lowercase
-          tag: ghcr.io/${{ secrets.TOKEN }}/team_work-lambert_w_function:slim  # Use lowercase
+          target: ghcr.io/${{ secrets.TOKEN }}/team_work-lambert_w_function:latest  # Use the full repository path
+          tag: slim  # Only specify the tag name (e.g., "slim")
 
       - name: Push slimmed Docker image
         run: |
